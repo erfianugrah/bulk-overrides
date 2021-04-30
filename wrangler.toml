@@ -12,7 +12,7 @@ kv_namespaces = [
 [env.prod]
 name = "prod-overrides"
 vars = { ENVIRONMENT = "production" }
-route = "*test.erfianugrah.com/*"
+route = "*test2.erfianugrah.com/*"
 kv_namespaces = [
          { binding = "override_variables", id = "b5cd88bd2c8046628292d6248b350291" }
 ]
