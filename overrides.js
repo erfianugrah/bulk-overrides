@@ -6,9 +6,9 @@ async function handleRequest(request) {
 
 const newRequest = new URL(request.url)
 
-const home = await override_variables.get("home", {type: "json"})
-const net = await override_variables.get("net", {type: "json"})
-const ml = await override_variables.get("ml", {type: "json"})
+const home = await override_variables.get("home")
+const net = await override_variables.get("net")
+const ml = await override_variables.get("ml")
 
 const origin = { home, net, ml }
 
