@@ -14,7 +14,7 @@ const origin = [
 
 const resolve = origin.find( ({incoming_path}) => newRequest.pathname = incoming_path ) ?? {}
 
-newRequest.port = resolve.incoming_port
+//newRequest.port = resolve.incoming_port
 newRequest.host = resolve.new_host
 
 const newResponse = await fetch(request,
