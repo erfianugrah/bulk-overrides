@@ -1,0 +1,8 @@
+{
+    "name": "{{ project-name }}",
+    "version": "1.0.0",
+    "description": "bulk overrides",
+    "main": "overrides.js",
+    "author": "{{ authors }}",
+    "license": "ISC"
+}
