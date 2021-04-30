@@ -6,7 +6,7 @@ name = "staging-overrides"
 vars = { ENVIRONMENT = "staging" }
 workers_dev = true
 kv_namespaces = [
-         { binding = "override_variables", id = "0c01ea38e588421f9b5dd816bc18c5a9" }
+         { binding = "override_variables", id = "2ba3494af4d34a889555b740b59be954" }
 ]
 
 [env.prod]
@@ -14,5 +14,5 @@ name = "prod-overrides"
 vars = { ENVIRONMENT = "production" }
 route = "*test.erfianugrah.com/*"
 kv_namespaces = [
-         { binding = "override_variables", id = "0c01ea38e588421f9b5dd816bc18c5a9" }
+         { binding = "override_variables", id = "b5cd88bd2c8046628292d6248b350291" }
 ]
