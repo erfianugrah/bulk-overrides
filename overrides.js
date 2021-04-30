@@ -13,8 +13,7 @@ const newResponse = await fetch(request,
             {
                 resolveOverride: resolve.origin
                     },
-            },
-        })
+        },)
 
 const response = new Response(newResponse.body, newResponse)
 response.headers.set('debug', JSON.stringify(cache))
