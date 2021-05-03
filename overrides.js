@@ -16,6 +16,7 @@ const resolve = origin.find( ({incoming_path}) => newRequest.pathname = incoming
 
 //newRequest.port = resolve.incoming_port
 newRequest.host = resolve.new_host
+newRequest.pathname = '/'
 
 const newResponse = await fetch(request,
         { cf:
