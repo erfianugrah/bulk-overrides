@@ -20,7 +20,7 @@ newRequest.host = resolve.new_host
 const newResponse = await fetch(request,
         { cf:
             {
-                resolveOverride: newRequest.host
+                resolveOverride: resolve.new_host
                     },
         },)
 
