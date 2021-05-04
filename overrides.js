@@ -18,7 +18,7 @@ const subRequest = new Request(request)
 subRequest.host = resolve.new_host
 subRequest.pathname = ''
 
-const newResponse = await fetch(subRequest,
+const newResponse = await fetch(newRequest, 
     { cf:  {resolveOverride: resolve.new_host }} ) 
 
 const response = new Response(newResponse.body, newResponse)
