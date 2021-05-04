@@ -17,15 +17,15 @@ const resolve = origin.find( ({incoming_path}) => newRequest.pathname = incoming
 //newRequest.port = resolve.incoming_port
 newRequest.host = resolve.new_host
 newRequest.pathname = '/'
-
+/*
 const newResponse = await fetch(newRequest,
         { cf:
             {
                 resolveOverride: resolve.new_host
                     },
         },)
-
-const response = new Response(newResponse.body, newResponse)
+*/
+const response = new Response(newRequest.body, newRequest)
 response.headers.set('debug', JSON.stringify(resolve))
 return response
 }
