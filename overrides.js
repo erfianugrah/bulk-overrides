@@ -14,15 +14,15 @@ const origin = [
 
 const resolve = origin.find( ({ incoming_path }) => newRequest.pathname.match(incoming_path)) ?? {}
 
-//const subRequest = new Request(request)
-newRequest.host = resolve.new_host
-newRequest.pathname = ''
+const subRequest = new Request(request)
+subRequest.host = resolve.new_host
+subRequest.pathname = ''
 
-
+/*
 const newResponse = await fetch(newRequest, 
     { cf:  { resolveOverride: resolve.new_host }} ) 
-
-const response = new Response(newResponse.body, newResponse)
+*/
+const response = new Response(subRequest.body, subRequest)
 response.headers.set('debug-1', JSON.stringify(resolve))
 response.headers.set('debug-2', JSON.stringify(resolve.new_host))
 
