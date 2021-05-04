@@ -16,7 +16,7 @@ const resolve = origin.find( ({incoming_path}) => newRequest.pathname = incoming
 
 //newRequest.port = resolve.incoming_port
 newRequest.host = resolve.new_host
-newRequest.pathname = '/'
+//newRequest.pathname = '/'
 /*
 const newResponse = await fetch(newRequest,
         { cf:
@@ -26,6 +26,7 @@ const newResponse = await fetch(newRequest,
         },)
 */
 const response = new Response(newRequest.body, newRequest)
-response.headers.set('debug', JSON.stringify(resolve))
+response.headers.set('debug-1', JSON.stringify(resolve))
+response.headers.set('debug-2', JSON.stringify(resolve.new_host))
 return response
 }
