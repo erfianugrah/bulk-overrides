@@ -18,7 +18,7 @@ const resolve = origin.find( ({incoming_path}) => newRequest.pathname = incoming
 newRequest.host = resolve.new_host
 newRequest.pathname = '/'
 
-const newResponse = await fetch(request,
+const newResponse = await fetch(newRequest,
         { cf:
             {
                 resolveOverride: resolve.new_host
