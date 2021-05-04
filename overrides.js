@@ -7,9 +7,10 @@ async function handleRequest(request) {
 const newRequest = new URL(request.url)
 
 const origin = [
-    await override_variables.get("home"),  
+    { 'new_host': 'home.erfianugrah.best', 'incoming_path': '/home', 'incoming_port': 1234 }
+    /*await override_variables.get("home"),  
     await override_variables.get("net"),
-    await override_variables.get("ml")
+    await override_variables.get("ml")*/
 ]
 
 const resolve = origin.find( ({ incoming_path }) => newRequest.pathname == incoming_path) ?? {}
