@@ -7,7 +7,7 @@ async function handleRequest(request) {
 const newRequest = new URL(request.url)
 
 const origin = [
-    { 'new_host': 'home.erfianugrah.best', 'incoming_path': 'home', 'incoming_port': 1234 },
+    { 'new_host': 'home.erfianugrah.best', 'incoming_path': '/home', 'incoming_port': 1234 },
     { 'new_host': 'www.erfianugrah.net', 'incoming_path': '/net', 'incoming_port': 1234 },
     { 'new_host': 'www.erfi.ml', 'incoming_path': '/ml', 'incoming_port': 1234 },
     { 'new_host': 'www.google.com', 'incoming_path': '/google', 'incoming_port': 1234 },
@@ -20,6 +20,7 @@ const newResponse = await fetch(newRequest,
     { cf:  { resolveOverride: resolve.new_host }} ) 
 
 newRequest.hostname = resolve.new_host
+newRequest.pathname = ''
 
 const response = new Response(newResponse.body, newResponse)
 response.headers.set('debug-1', JSON.stringify(resolve))
