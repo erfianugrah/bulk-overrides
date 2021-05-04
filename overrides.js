@@ -14,9 +14,9 @@ const origin = [
 
 const resolve = origin.find( ({ incoming_path }) => newRequest.pathname.match(incoming_path)) ?? {}
 
-const subRequest = new Request(request)
-subRequest.host = resolve.new_host
-subRequest.pathname = ''
+//const subRequest = new Request(request)
+newRequest.host = resolve.new_host
+newRequest.pathname = ''
 
 /*
 const newResponse = await fetch(newRequest, 
