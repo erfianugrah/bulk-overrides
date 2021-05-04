@@ -17,10 +17,10 @@ const resolve = origin.find( ({ incoming_path }) => newRequest.pathname.match(in
 newRequest.host = resolve.new_host
 newRequest.pathname = ''
 
-let response = await fetch(newRequest, 
+const newResponse = await fetch(newRequest, 
     { cf:  {resolveOverride: resolve.new_host }} ) 
 
-const response = new Response(response.body, response)
+const response = new Response(newResponse.body, newResponse)
 response.headers.set('debug-1', JSON.stringify(resolve))
 response.headers.set('debug-2', JSON.stringify(resolve.new_host))
 
