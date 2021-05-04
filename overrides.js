@@ -12,7 +12,7 @@ const origin = [
     await override_variables.get("ml") // { 'new_host': 'www.erfi.ml', 'incoming_path': '/ml', 'incoming_port': 1234 }
 ]
 
-const resolve = origin.find( ({incoming_path}) => newRequest.pathname = incoming_path ) ?? {}
+const resolve = origin.find( ({incoming_path}) => newRequest.pathname == incoming_path ) ?? {}
 
 //newRequest.port = resolve.incoming_port
 newRequest.host = resolve.new_host
