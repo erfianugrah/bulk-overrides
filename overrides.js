@@ -12,7 +12,7 @@ const origin = [
     await override_variables.get("ml")
 ]
 
-const resolve = origin.find( ({ incoming_path }) => newRequest.pathname.match(incoming_path)) ?? {}
+const resolve = origin.find( ({ incoming_path }) => newRequest.pathname == incoming_path) ?? {}
 
 newRequest.host = resolve.new_host
 newRequest.pathname = ''

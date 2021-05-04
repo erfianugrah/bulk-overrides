@@ -1,5 +1,5 @@
 [
-    { "key": "home", "value": { "new_host": "home.erfianugrah.best", "incoming_path": /(\/home)/, "incoming_port": 1234 } } ,
-    { "key": "net", "value": { "new_host": "www.erfianugrah.net", "incoming_path": /(\/net)/, "incoming_port": 1234 } },
-    { "key": "ml", "value": { "new_host": "www.erfi.ml", "incoming_path": /(\/ml)/, "incoming_port": 1234 } }
+    { "key": "home", "value": "{ 'new_host': 'home.erfianugrah.best', 'incoming_path': '/home', 'incoming_port': 1234 }" },
+    { "key": "net", "value": "{ 'new_host': 'www.erfianugrah.net', 'incoming_path': '/net', 'incoming_port': 1234 }" },
+    { "key": "ml", "value": "{ 'new_host': 'www.erfi.ml', 'incoming_path': '/ml', 'incoming_port': 1234 }" }
 ]
