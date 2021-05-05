@@ -20,7 +20,7 @@ const origin = [
     { 'new_host': 'http.erfianugrah.com', 'incoming_path': '/http', 'incoming_port': 1234 },
     */
 ]
-
+console.log(origin)
 const resolve = origin.find( ({ incoming_path }) => newRequest.pathname === incoming_path) ?? {}
 
 newRequest.hostname = resolve.new_host
