@@ -7,7 +7,7 @@ async function handleRequest(request) {
 const newRequest = new URL(request.url)
 
 const origin = [
-    await override_variables.get("home", {type: "json"}),
+    let { value, metadata } = await override_variables.getWithMetadata("home"),
     await override_variables.get("net", {type: "json"}),
     await override_variables.get("ml", {type: "json"}),
     await override_variables.get("google", {type: "json"}),
