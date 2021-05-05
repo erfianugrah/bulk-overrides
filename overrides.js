@@ -7,20 +7,15 @@ async function handleRequest(request) {
 const newRequest = new URL(request.url)
 
 const origin = [
-    let { value, metadata } = await override_variables.getWithMetadata("home"),
-    await override_variables.get("net", {type: "json"}),
-    await override_variables.get("ml", {type: "json"}),
-    await override_variables.get("google", {type: "json"}),
-    await override_variables.get("http", {type: "json"}),
-    /*
+
     { 'new_host': 'home.erfianugrah.best', 'incoming_path': '/home', 'incoming_port': 1234 },
     { 'new_host': 'www.erfianugrah.net', 'incoming_path': '/net', 'incoming_port': 1234 },
     { 'new_host': 'www.erfi.ml', 'incoming_path': '/ml', 'incoming_port': 1234 },
     { 'new_host': 'www.google.com', 'incoming_path': '/google', 'incoming_port': 1234 },
     { 'new_host': 'http.erfianugrah.com', 'incoming_path': '/http', 'incoming_port': 1234 },
-    */
+
 ]
-console.log(origin)
+
 const resolve = origin.find( ({ incoming_path }) => newRequest.pathname === incoming_path) ?? {}
 
 newRequest.hostname = resolve.new_host
